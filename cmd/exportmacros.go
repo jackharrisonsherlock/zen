@@ -81,14 +81,14 @@ func WriteFileMacros(macros []zendesk.Macro) error {
 	header = append(header, "created_at")
 	header = append(header, "position")
 	header = append(header, "description")
-	header = append(header, "actions")
-	header = append(header, "restriction")
+	// header = append(header, "actions")
+	// header = append(header, "restriction")
 
 	// Commit the header.
 	writer.Write(header)
 	for _, macro := range macros {
 
-		var url, id, title, active, updated_at, created_at, position, description, actions, restriction string
+		var url, id, title, active, updated_at, created_at, position, description string
 
 		if macro.URL != nil {
 			url = *macro.URL
@@ -117,9 +117,9 @@ func WriteFileMacros(macros []zendesk.Macro) error {
 		// if macro.Actions != nil {
 		// 	actions = *macro.Actions
 		// }
-		if macro.Restriction != nil {
-			restriction = fmt.Sprintf("%v", *macro.Restriction)
-		}
+		// if macro.Restriction != nil {
+		// 	restriction = fmt.Sprintf("%v", *macro.Restriction)
+		// }
 
 		var record []string
 		record = append(record, url)
@@ -130,8 +130,8 @@ func WriteFileMacros(macros []zendesk.Macro) error {
 		record = append(record, created_at)
 		record = append(record, position)
 		record = append(record, description)
-		record = append(record, actions)
-		record = append(record, restriction)
+		// record = append(record, actions)
+		// record = append(record, restriction)
 		writer.Write(record)
 	}
 

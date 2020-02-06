@@ -79,8 +79,8 @@ func WriteFileAutomations(automations []zendesk.Automation) error {
 	header = append(header, "id")
 	header = append(header, "title")
 	header = append(header, "active")
-	header = append(header, "actions")
-	header = append(header, "conditions")
+	// header = append(header, "actions")
+	// header = append(header, "conditions")
 	header = append(header, "created_at")
 	header = append(header, "updated_at")
 
@@ -90,7 +90,7 @@ func WriteFileAutomations(automations []zendesk.Automation) error {
 	// Now loop through each  object and populate the CSV.
 	for _, automation := range automations {
 
-		var id, title, active, actions, conditions, createdAt, updatedAt string
+		var id, title, active, createdAt, updatedAt string
 
 		if automation.ID != nil {
 			id = fmt.Sprintf("%v", *automation.ID)
@@ -118,8 +118,8 @@ func WriteFileAutomations(automations []zendesk.Automation) error {
 		record = append(record, id)
 		record = append(record, title)
 		record = append(record, active)
-		record = append(record, conditions)
-		record = append(record, actions)
+		// record = append(record, conditions)
+		// record = append(record, actions)
 		record = append(record, createdAt)
 		record = append(record, updatedAt)
 		writer.Write(record)
