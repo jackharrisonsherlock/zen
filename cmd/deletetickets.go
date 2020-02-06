@@ -13,7 +13,8 @@ import (
 var deleteticketCmd = &cobra.Command{
 	Use:   "delete-tickets",
 	Short: "Delete Tickets",
-	Long: fmt.Sprintf(`
+	Long: fmt.Sprintf(`You can delete 400 tickets every 1 minute using this endpoint.
+	
 This tool requires a CSV of Ticket IDs, no headers.
 
 Example:

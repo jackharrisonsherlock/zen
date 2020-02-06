@@ -16,6 +16,7 @@ import (
 var exportagentsCmd = &cobra.Command{
 	Use:   "export-agents",
 	Short: "Export Agents",
+	Long:  "Exports a list of Agents/Admins",
 
 	Run: func(cmd *cobra.Command, args []string) {
 		exportAgents()
@@ -75,7 +76,6 @@ func WriteFileAgents(agents []zendesk.User) error {
 	// Write the header line.
 	var header []string
 	header = append(header, "url")
-
 	header = append(header, "id")
 	header = append(header, "name")
 	header = append(header, "alias")
@@ -99,7 +99,7 @@ func WriteFileAgents(agents []zendesk.User) error {
 	// Now loop through each  object and populate the CSV.
 	for _, agent := range agents {
 
-		var url, id, name, alias, createdAt, updatedAt, active, verified, shared, timezone, lastLoginAt, phone, email, signature, details, role, restrictedAgent, suspended string
+		var url, id, name, alias, createdAt, updatedAt, active, verified, timezone, lastLoginAt, phone, email, signature, details, role, restrictedAgent, suspended string
 
 		if agent.URL != nil {
 			url = *agent.URL
@@ -124,9 +124,6 @@ func WriteFileAgents(agents []zendesk.User) error {
 		}
 		if agent.Verified != nil {
 			verified = fmt.Sprintf("%v", *agent.Verified)
-		}
-		if agent.Shared != nil {
-			shared = fmt.Sprintf("%v", *agent.Shared)
 		}
 		if agent.TimeZone != nil {
 			timezone = fmt.Sprintf("%v", *agent.TimeZone)
@@ -162,7 +159,6 @@ func WriteFileAgents(agents []zendesk.User) error {
 		record = append(record, updatedAt)
 		record = append(record, active)
 		record = append(record, verified)
-		record = append(record, shared)
 		record = append(record, timezone)
 		record = append(record, lastLoginAt)
 		record = append(record, email)

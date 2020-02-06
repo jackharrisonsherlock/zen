@@ -13,7 +13,8 @@ import (
 var deletearticleCmd = &cobra.Command{
 	Use:   "delete-articles",
 	Short: "Delete Articles",
-	Long: fmt.Sprintf(`
+	Long: fmt.Sprintf(`Archives the article. You can restore the article using the Help Center user interface.
+	
 This tool requires a CSV of Article IDs, no headers.
 
 Example:

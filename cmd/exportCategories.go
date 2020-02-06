@@ -16,6 +16,7 @@ import (
 var exportCategoriesCmd = &cobra.Command{
 	Use:   "export-categories",
 	Short: "Export Categories",
+	Long:  "Exports a list of Help Centre Categories",
 
 	Run: func(cmd *cobra.Command, args []string) {
 		exportCategories()

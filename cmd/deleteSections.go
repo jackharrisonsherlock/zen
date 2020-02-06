@@ -13,7 +13,8 @@ import (
 var deleteSectionCmd = &cobra.Command{
 	Use:   "delete-sections",
 	Short: "Delete Sections",
-	Long: fmt.Sprintf(`
+	Long: fmt.Sprintf(`Deletes the Help Centre Section.
+
 This tool requires a CSV of Sections IDs, no headers.
 
 Example:

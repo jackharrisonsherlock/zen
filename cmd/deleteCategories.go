@@ -13,7 +13,8 @@ import (
 var deleteCategoriesCmd = &cobra.Command{
 	Use:   "delete-categories",
 	Short: "Delete Categories",
-	Long: fmt.Sprintf(`
+	Long: fmt.Sprintf(`Deletes the Help Centre Category. 
+	
 This tool requires a CSV of Category IDs, no headers.
 
 Example:

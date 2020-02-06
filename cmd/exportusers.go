@@ -16,6 +16,7 @@ import (
 var exportusersCmd = &cobra.Command{
 	Use:   "export-users",
 	Short: "Export Users",
+	Long:  "Exports a list of end users",
 
 	Run: func(cmd *cobra.Command, args []string) {
 		exportUsers()
