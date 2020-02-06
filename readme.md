@@ -24,27 +24,30 @@ This will guide you through the process of adding your subdomain, email and [API
 
 ## Commands
 
-- Delete Automations
-- Delete Categories
-- Delete Groups
-- Delete Macros
-- Delete Organizations
-- Delete Sections
-- Delete Tickets
-- Delete Triggers
-- Delete Users
-- Delete Views
-- Export Agents
-- Export Articles
-- Export Automations
-- Export Categories
-- Export Groups
-- Export Macros
-- Export Triggers
-- Export Sections
-- Export Tickets
-- Export Users
-- Export Views
+### Delete
+- Automations
+- Categories
+- Groups
+- Macros
+- Organizations
+- Sections
+- Tickets
+- Triggers
+- Users
+- Views
+
+### Export
+- Agents
+- Articles
+- Automations
+- Categories
+- Groups
+- Macros
+- Organizations
+- Sections
+- Triggers
+- Users
+- Views
 
 ## Examples
 
