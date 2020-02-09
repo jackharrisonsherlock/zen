@@ -25,6 +25,7 @@ This will guide you through the process of adding your subdomain, email and [API
 ## Commands
 
 ### Delete
+- Articles
 - Automations
 - Categories
 - Groups
