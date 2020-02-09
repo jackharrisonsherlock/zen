@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="images/zen.png" height="34">
-<p align="center">Zendesk CLI</p>
-
-<p align="center"><img src="images/screenshot.png" width="864"></p>
+<p align="center"><img src="images/header.png" width="864"></p>
 
 ## Installation
 
